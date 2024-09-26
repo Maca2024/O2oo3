@@ -21,33 +21,36 @@ body {
     text-align: center;
     max-width: 500px;
     width: 90%;
+    margin: 0 15px; /* Add margin for smaller screens */
 }
 
 /* Header Section */
 header .logo {
-    max-width: 150px;
+    max-width: 100px; /* Make the logo smaller for mobile */
     margin-bottom: 15px;
     border-radius: 50%;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 25px;
+    font-size: 2rem; /* Make header text smaller */
+    margin-bottom: 20px;
     color: #00b894;
 }
 
 /* Control Panel */
 .controls {
     display: grid;
-    gap: 15px;
+    gap: 10px;
     grid-template-columns: 1fr;
     margin-bottom: 20px;
 }
 
+/* Control items: Adapt to mobile */
 .control-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 0.9rem; /* Make text slightly smaller */
 }
 
 .control-item label {
@@ -56,11 +59,11 @@ header h1 {
 }
 
 .control-item input {
-    padding: 8px;
+    padding: 6px;
     font-size: 1rem;
     border-radius: 5px;
     border: none;
-    width: 80px;
+    width: 60px; /* Make input boxes smaller */
     text-align: center;
     outline: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -71,13 +74,13 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 250px; /* Reduce height for mobile */
 }
 
 /* Styling van de Bal */
 #breath-ball {
-    width: 150px;
-    height: 150px;
+    width: 120px; /* Make the ball smaller */
+    height: 120px;
     background: radial-gradient(circle, #00cec9, #0984e3);
     border-radius: 50%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -85,12 +88,48 @@ header h1 {
     transform-origin: center;
 }
 
-/* Bal Animatie Keyframes */
-@keyframes breathAnimation {
-    0%, 100% {
-        transform: scale(1); /* Start en eind in originele grootte */
+/* Buttons */
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically on mobile */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin: 5px 0; /* Reduce margin for mobile */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Responsive layout for different screen sizes */
+@media (max-width: 600px) {
+    /* Reduce container width and font sizes for smaller screens */
+    .container {
+        width: 100%;
+        max-width: 90%;
+        padding: 15px;
     }
-    50% {
-        transform: scale(1.4); /* Soepele, subtiele groei */
+
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    #breath-ball {
+        width: 100px;
+        height: 100px;
+    }
+
+    .controls {
+        gap: 8px;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 15px;
     }
 }
