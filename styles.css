@@ -19,55 +19,56 @@ body {
     padding: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
-    max-width: 500px;
+    max-width: 400px; /* Smaller container for a focused look */
     width: 100%;
-    margin: 0 20px; /* Reduce margin for smaller screens */
+    margin: 20px; /* Centered and small margin */
 }
 
 /* Header Section */
 header .logo {
-    max-width: 120px; /* Reduced size for mobile */
+    max-width: 100px; /* Smaller size for a quiet look */
     width: 100%;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border-radius: 50%;
 }
 
 header h1 {
-    font-size: 2rem; /* Responsive header text */
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Adjusted for a quiet header */
+    margin-bottom: 15px;
     color: #00b894;
 }
 
 /* Control Panel */
 .controls {
     display: grid;
-    gap: 12px;
-    grid-template-columns: 1fr 1fr; /* Two columns for better layout */
-    margin-bottom: 20px;
+    grid-template-columns: 1fr 1fr; /* Two-column layout: label and input */
+    gap: 8px;
+    margin-bottom: 15px;
 }
 
 /* Control Items */
 .control-item {
     display: flex;
-    flex-direction: column; /* Stack label and input */
+    justify-content: space-between; /* Align label and input */
     align-items: center;
-    font-size: 0.9rem; /* Make text slightly smaller */
-    margin-bottom: 10px; /* Add spacing for mobile */
+    font-size: 0.9rem;
 }
 
 .control-item label {
     font-weight: bold;
     color: #81ecec;
-    margin-bottom: 5px; /* Space between label and input */
+    text-align: left; /* Align text to the left */
+    flex-grow: 1;
+    padding-right: 10px; /* Space between label and input */
 }
 
 .control-item input {
-    padding: 6px;
-    font-size: 1rem;
+    padding: 4px;
+    font-size: 0.9rem;
     border-radius: 5px;
     border: none;
-    width: 80%; /* Make input boxes smaller */
+    width: 50px; /* Make input boxes small */
     text-align: center;
     outline: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -78,13 +79,13 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px; /* Reduce height for mobile */
+    height: 200px;
 }
 
 /* Styling van de Bal */
 #breath-ball {
-    width: 100px; /* Smaller ball for mobile */
-    height: 100px;
+    width: 80px; /* Smaller ball for a quiet layout */
+    height: 80px;
     background: radial-gradient(circle, #00cec9, #0984e3);
     border-radius: 50%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -94,45 +95,25 @@ header h1 {
 
 /* Buttons */
 .button-group {
-    margin-top: 20px;
+    margin-top: 15px;
     display: flex;
-    flex-direction: column; /* Stack buttons vertically on mobile */
+    gap: 10px;
+    justify-content: center;
 }
 
 button {
-    padding: 12px 20px;
-    font-size: 1rem; /* Smaller buttons for mobile */
-    margin: 5px 0; /* Vertical margin between buttons */
+    padding: 8px 15px;
+    font-size: 0.9rem; /* Smaller button size */
+    margin: 5px 0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.2s;
+    background-color: #00b894;
+    color: #fff;
 }
 
-/* Responsive Layout for Smaller Screens */
-@media (max-width: 768px) {
-    .container {
-        padding: 15px;
-        width: 95%;
-        margin: 10px auto;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    .controls {
-        grid-template-columns: 1fr; /* Single column layout for controls */
-        gap: 15px;
-    }
-
-    #breath-ball {
-        width: 80px; /* Further reduce size for smaller screens */
-        height: 80px;
-    }
-
-    button {
-        font-size: 0.9rem;
-        padding: 10px 15px;
-    }
+/* Hover effect for buttons */
+button:hover {
+    background-color: #55efc4;
 }
