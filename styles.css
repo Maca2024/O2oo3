@@ -1,0 +1,96 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #2a2b2e, #4a4b4f);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+/* Header Section */
+header .logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #00b894;
+}
+
+/* Control Panel */
+.controls {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr;
+    margin-bottom: 20px;
+}
+
+.control-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.control-item label {
+    font-weight: bold;
+    color: #81ecec;
+}
+
+.control-item input {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    width: 80px;
+    text-align: center;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Breath Ball Visualizer */
+.visualizer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+/* Styling van de Bal */
+#breath-ball {
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #00cec9, #0984e3);
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 1s ease-in-out;
+    transform-origin: center;
+}
+
+/* Bal Animatie Keyframes */
+@keyframes breathAnimation {
+    0%, 100% {
+        transform: scale(1); /* Start en eind in originele grootte */
+    }
+    50% {
+        transform: scale(1.4); /* Soepele, subtiele groei */
+    }
+}
