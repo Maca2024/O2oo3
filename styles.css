@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Main Container */
@@ -20,19 +20,21 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
     max-width: 500px;
-    width: 90%;
-    margin: 0 15px; /* Add margin for smaller screens */
+    width: 100%;
+    margin: 0 20px; /* Reduce margin for smaller screens */
 }
 
 /* Header Section */
 header .logo {
-    max-width: 100px; /* Make the logo smaller for mobile */
+    max-width: 120px; /* Reduced size for mobile */
+    width: 100%;
+    height: auto;
     margin-bottom: 15px;
     border-radius: 50%;
 }
 
 header h1 {
-    font-size: 2rem; /* Make header text smaller */
+    font-size: 2rem; /* Responsive header text */
     margin-bottom: 20px;
     color: #00b894;
 }
@@ -40,22 +42,24 @@ header h1 {
 /* Control Panel */
 .controls {
     display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr;
+    gap: 12px;
+    grid-template-columns: 1fr 1fr; /* Two columns for better layout */
     margin-bottom: 20px;
 }
 
-/* Control items: Adapt to mobile */
+/* Control Items */
 .control-item {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack label and input */
     align-items: center;
     font-size: 0.9rem; /* Make text slightly smaller */
+    margin-bottom: 10px; /* Add spacing for mobile */
 }
 
 .control-item label {
     font-weight: bold;
     color: #81ecec;
+    margin-bottom: 5px; /* Space between label and input */
 }
 
 .control-item input {
@@ -63,7 +67,7 @@ header h1 {
     font-size: 1rem;
     border-radius: 5px;
     border: none;
-    width: 60px; /* Make input boxes smaller */
+    width: 80%; /* Make input boxes smaller */
     text-align: center;
     outline: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -74,13 +78,13 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250px; /* Reduce height for mobile */
+    height: 200px; /* Reduce height for mobile */
 }
 
 /* Styling van de Bal */
 #breath-ball {
-    width: 120px; /* Make the ball smaller */
-    height: 120px;
+    width: 100px; /* Smaller ball for mobile */
+    height: 100px;
     background: radial-gradient(circle, #00cec9, #0984e3);
     border-radius: 50%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -96,40 +100,39 @@ header h1 {
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    margin: 5px 0; /* Reduce margin for mobile */
+    padding: 12px 20px;
+    font-size: 1rem; /* Smaller buttons for mobile */
+    margin: 5px 0; /* Vertical margin between buttons */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.2s;
 }
 
-/* Responsive layout for different screen sizes */
-@media (max-width: 600px) {
-    /* Reduce container width and font sizes for smaller screens */
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
     .container {
-        width: 100%;
-        max-width: 90%;
         padding: 15px;
+        width: 95%;
+        margin: 10px auto;
     }
 
     header h1 {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-    }
-
-    #breath-ball {
-        width: 100px;
-        height: 100px;
+        font-size: 1.8rem;
     }
 
     .controls {
-        gap: 8px;
+        grid-template-columns: 1fr; /* Single column layout for controls */
+        gap: 15px;
+    }
+
+    #breath-ball {
+        width: 80px; /* Further reduce size for smaller screens */
+        height: 80px;
     }
 
     button {
-        font-size: 1rem;
-        padding: 8px 15px;
+        font-size: 0.9rem;
+        padding: 10px 15px;
     }
 }
